@@ -1,0 +1,11 @@
+{
+  "name": "spl-score-tracker",
+  "version": "1.0.0",
+  "main": "home.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aaryan sarda",
+  "license": "ISC",
+  "description": ""
+}

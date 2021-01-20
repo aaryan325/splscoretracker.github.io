@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+<style>
+   body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   }
+   .result {
+      font-size: 18px;
+      font-weight: 500;
+      color: blueviolet;
+   }
+</style>
+</head>
+<body onbeforeunload="return pageUnload()">
+<h1>Checking whether a Button is clicked using JavaScript</h1>
+<div class="result"></div>
+<br />
+<button class="Btn">CLICK HERE</button>
+<h3>Click on the above button to check if the button is clicked</h3>
+<script>
+   let BtnEle = document.querySelector(".Btn");
+   let resEle = document.querySelector(".result");
+   let clickCount = 0;
+   BtnEle.addEventListener("click", () => {
+      clickCount++;
+      resEle.innerHTML =
+      "The button has been clicked " + clickCount + " times ";
+   });
+</script>
+</body>
+</html>

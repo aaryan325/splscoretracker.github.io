@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 20%;
+            background: radial-gradient(circle at center, red 0, blue, green 100%);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0px;
+            z-index: -1;
+            width: 100vw;
+            height: 110vh;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: #a42310; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Welcome To The SPL Score Tracker</h1>
+    <h3>Click On The Start Button To start Managing the scores</h3>
+    <button onclick="start();" style="width: 200px; font-size: 20px; height: 50px; background-color: blue; color: white; border: none; border-radius: 30px; cursor: pointer;">start</button>
+    <script>
+        function start() {
+            window.location = "cricketdata.html";
+        }
+    </script>
+</body>
+</html>

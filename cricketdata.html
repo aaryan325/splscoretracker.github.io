@@ -1,0 +1,321 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="firebase2.js"></script>
+    <style>
+        body {
+            background: radial-gradient(
+                ellipse at left bottom,
+                lightgreen 0%,
+                green 59%,
+                darkgreen 100%,
+            );
+        }
+        div {
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0px;
+            z-index: -1;
+            width: 100vw;
+            height: 110vh;
+            background-size: cover;
+            margin-left: 0px;
+        }
+
+        .button0 {
+            width: 500px;
+            font-size: 20px; 
+            height: 30px;
+            background-color: blue; 
+            color: white; 
+            border: none;  
+            cursor: pointer;
+            
+            display: grid;
+            place-items: center;
+        }
+
+        .button1 {
+            width: 500px;
+            font-size: 20px; 
+            height: 30px;
+            background-color: blue; 
+            color: white; 
+            border: none;  
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+        }
+
+        .button2 {
+            width: 500px;
+            font-size: 20px; 
+            height: 30px;
+            background-color: blue; 
+            color: white; 
+            border: none;  
+            cursor: pointer;
+            
+            display: grid;
+            place-items: center;
+        }
+
+        .button3 {
+            width: 500px;
+            font-size: 20px; 
+            height: 30px; 
+            background-color: blue; 
+            color: white; 
+            border: none;  
+            cursor: pointer;
+            
+            display: grid;
+            place-items: center;
+        }
+
+        .button4 {
+            width: 500px;
+            font-size: 20px; 
+            height: 30px; 
+            background-color: blue; 
+            color: white; 
+            border: none;  
+            cursor: pointer;
+            
+            display: grid;
+            place-items: center;
+        }
+
+        .button5 {
+            width: 500px;
+            font-size: 20px; 
+            height: 30px; 
+            background-color: blue; 
+            color: white; 
+            border: none;  
+            cursor: pointer;
+            
+            display: grid;
+            place-items: center;
+        }
+
+        .button6 {
+            width: 500px;
+            font-size: 20px; 
+            height: 30px; 
+            background-color: blue; 
+            color: white; 
+            border: none;  
+            cursor: pointer;
+            
+            display: grid;
+            place-items: center;
+        }
+
+        .button7 {
+            width: 500px;
+            font-size: 20px; 
+            height: 30px; 
+            background-color: blue; 
+            color: white; 
+            border: none;  
+            cursor: pointer;
+            
+            display: grid;
+            place-items: center;
+        }
+
+        .button8 {
+            width: 500px;
+            font-size: 20px; 
+            height: 30px; 
+            background-color: blue; 
+            color: white; 
+            border: none;  
+            cursor: pointer;
+            
+            display: grid;
+            place-items: center;
+        }
+
+        .button12 {
+            width: 500px;
+            font-size: 20px; 
+            height: 30px; 
+            background-color: blue; 
+            color: white; 
+            border: none;  
+            cursor: pointer;
+            
+            display: grid;
+            place-items: center;
+        }
+        
+        .buttonerase {
+            width: 500px;
+            font-size: 20px; 
+            height: 30px; 
+            background-color: blue; 
+            color: white; 
+            border: none;  
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+        }
+
+        .buttonwide {
+            width: 500px;
+            font-size: 20px; 
+            height: 30px; 
+            background-color: blue; 
+            color: white; 
+            border: none;  
+            cursor: pointer;
+            
+            display: grid;
+            place-items: center;
+        }
+
+        .buttonwicket {
+            width: 500px;
+            font-size: 20px; 
+            height: 30px; 
+            background-color: blue; 
+            color: white; 
+            border: none;  
+            cursor: pointer;
+            
+            display: grid;
+            place-items: center;
+        }
+
+        .buttonNo {
+            width: 500px;
+            font-size: 20px; 
+            height: 30px; 
+            background-color: blue; 
+            color: white; 
+            border: none;  
+            cursor: pointer;
+            
+            display: grid;
+            place-items: center;
+        }
+
+        .buttonovers {
+            width: 500px;
+            font-size: 20px; 
+            height: 30px; 
+            background-color: blue; 
+            color: white; 
+            border: none;  
+            cursor: pointer;
+            
+            display: grid;
+            place-items: center;
+        }
+
+        .button-5 {
+            width: 500px;
+            font-size: 20px; 
+            height: 30px; 
+            background-color: blue; 
+            color: white; 
+            border: none;  
+            cursor: pointer;
+            
+            display: grid;
+            place-items: center;
+        }
+
+        table {
+            display: flex;
+        }
+
+        .container {
+            position: absolute;
+            top: 0px;
+            width: 1400px;
+            align-items: center;
+            height: 200px;
+            opacity: 0.2;
+            background-color: black;
+            z-index: 999;
+        }
+
+        .runsonballs {
+            background-color: white;
+            text-align: left;
+            cursor: default;
+        }
+
+        .overs {
+            background-color: white;
+            text-align: center;
+            cursor: default;
+        }
+        .extras {
+            background-color: white;
+            text-align: center;
+            cursor: default;
+        }
+        .h1:hover{ 
+        animation: rotate 2s linear; 
+    } 
+  
+    @keyframes rotate{ 
+        0%{ 
+            transform: rotate(0deg); 
+        } 
+        50%{ 
+            transform: rotate(180deg); 
+        } 
+        100%{ 
+            transform: rotate(360deg); 
+        } 
+    } 
+    </style>
+</head>
+<body>
+    <script src="firebase.js"></script>
+    <h1 style="font-size: 30px; color: darkgreen; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin-left: 5px; top: 2px; text-align: center;" id="h1" class="h1">SPL 2021</h1>
+    <button onclick="run0();" class="button0" id="ball0">0</button>
+    <button onclick="run1();" class="button1" id="100">1</button>
+    <button onclick="run2();" class="button2" id="2">2</button>
+    <button onclick="run3();" class="button3" id="3">3</button>
+    <button onclick="run4();" class="button4" id="4">4</button>
+    <button onclick="run6();" class="button6" id="6">6</button>
+    <button onclick="run8();" class="button8" id="8">8</button>
+    <button onclick="run12();" class="button12" id="12">12</button>
+    <button onclick="Wide();" class="buttonwide" id="Wide">👈👉</button>
+    <button onclick="Wicket();" class="buttonwicket" id="Wicket">👆</button>
+    <button onclick="Erase();" class="buttonerase" id="erase">Erase Last Value</button>
+    <button onclick="minus5runs();" class="button-5" id="minus5runs">-5</button>
+    <button onclick="Noball();" class="buttonNo" id="noball">No</button>
+    <button onclick="Noball1();" class="buttonNo" id="noball1">N1</button>
+    <button onclick="Noball2();" class="buttonNo" id="noball2">N2</button>
+    <button onclick="Noball3();" class="buttonNo" id="noball3">N3</button>
+    <button onclick="Noball4();" class="buttonNo" id="noball4">N4</button>
+    <button onclick="Noball6();" class="buttonNo" id="noball6">N6</button>
+    <button onclick="Noball8();" class="buttonNo" id="noball8">N8</button>
+    <button onclick="Noball12();" class="buttonNo" id="noball12">14</button>
+    <button onclick="overs();" class="buttonovers" id="overs">Overs</button>
+    <button onclick="storeData();" class="button0" id="buttonStoreData">Store Data</button>
+    <button onclick="reset();" class="button0" id="reset">Reset</button>
+    <p style="text-align: center;font-size: 20px; font-weight: bolder; color: Green; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; " class="totalRuns" id="totalRuns">Total runs= 0</p>
+    <p style="text-align:center;font-size: 20px;color: blue; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; " id="runsonballs" class="runsonballs">R/per b= ,</p>
+    <p style="font-size: 20px; color: red; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; " id="over" class="overs">Overs= </p>
+    <p style="font-size: 20px; color: blue; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; " id="extras" class="extras">Extras= , </p>
+    <div></div>
+    <input placeholder="Enter Team A" id="input" required type="text">
+    VS
+    <input placeholder="Enter Team B" id="input1" required type="text">
+    <input placeholder="Enter Inning Number" id="input2" required type="text">
+</body>
+</html>
